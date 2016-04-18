@@ -1,0 +1,10 @@
+# EP3---Leonardo-Andrade-e-Pedro-Garcia
+Exercício Programa 3 - Design de Software - Leonardo Andrade e Pedro Garcia
+
+import tkinter as tk
+
+
+class Jogo_da_velha:
+    def __init__(self,recebe_jogada,verifica_jogador,limpar_jogadas):
+        
+        
