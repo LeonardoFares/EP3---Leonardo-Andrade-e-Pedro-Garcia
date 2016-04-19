@@ -17,20 +17,35 @@ class Tabuleiro:
         self.janela.geometry("400x400+100+100")
         self.janela.rowconfigure(0, minsize = 50)
         self.janela.rowconfigure(1, minsize = 50)
+        self.janela.rowconfigure(2, minsize = 50)
         self.janela.columnconfigure(0, minsize = 50)
         self.janela.columnconfigure(1, minsize = 50)
+        self.janela.columnconfigure(2, minsize = 50)
+        
+        self.botao_0_0 = tk.Button(self.janela)
+        self.botao_0_0.grid(row=0,column=0,sticky="nsew")
+        self.botao_0_1 = tk.Button(self.janela)
+        self.botao_0_1.grid(row=0,column=1,sticky="nsew")
+        self.botao_0_2 = tk.Button(self.janela)
+        self.botao_0_2.grid(row=0,column=2,sticky="nsew")
+        self.botao_1_0 = tk.Button(self.janela)
+        self.botao_1_0.grid(row=1,column=0,sticky="nsew")
+        self.botao_2_0 = tk.Button(self.janela)
+        self.botao_2_0.grid(row=2,column=0,sticky="nsew")
+        self.botao_1_1 = tk.Button(self.janela)
+        self.botao_1_1.grid(row=1,column=1,sticky="nsew")
+        self.botao_1_2 = tk.Button(self.janela)
+        self.botao_1_2.grid(row=1,column=2,sticky="nsew")
+        self.botao_2_1 = tk.Button(self.janela)
+        self.botao_2_1.grid(row=2,column=1,sticky="nsew")
+        
+        
+        
         
     def iniciar(self):
         self.janela.mainloop()
         
-        
-        
-        self.matriz_botoes = np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
-        for i in range (0,3):
-            for j in range(0,3):
-                self.matriz_botoes[i][j] = tk.Button(self.janela)
-                self.matriz_botoes.grid(row = i, column = j, columnspan = 2, sticky = "nsew")
-        
-        
 app = Tabuleiro()
 app.iniciar()
+
+
