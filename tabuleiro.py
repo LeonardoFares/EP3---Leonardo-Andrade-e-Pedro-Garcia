@@ -14,13 +14,13 @@ class Tabuleiro:
     def __init__(self):
         self.janela = tk.Tk()  
         self.janela.title("Jogo da Velha")
-        self.janela.geometry("400x400+100+100")
-        self.janela.rowconfigure(0, minsize = 50)
-        self.janela.rowconfigure(1, minsize = 50)
-        self.janela.rowconfigure(2, minsize = 50)
-        self.janela.columnconfigure(0, minsize = 50)
-        self.janela.columnconfigure(1, minsize = 50)
-        self.janela.columnconfigure(2, minsize = 50)
+        self.janela.geometry("300x350+100+100")
+        self.janela.rowconfigure(0, minsize = 100)
+        self.janela.rowconfigure(1, minsize = 100)
+        self.janela.rowconfigure(2, minsize = 100)
+        self.janela.columnconfigure(0, minsize = 100)
+        self.janela.columnconfigure(1, minsize = 100)
+        self.janela.columnconfigure(2, minsize = 100)
         
         self.botao_0_0 = tk.Button(self.janela)
         self.botao_0_0.grid(row=0,column=0,sticky="nsew")
@@ -38,7 +38,8 @@ class Tabuleiro:
         self.botao_1_2.grid(row=1,column=2,sticky="nsew")
         self.botao_2_1 = tk.Button(self.janela)
         self.botao_2_1.grid(row=2,column=1,sticky="nsew")
-        
+        self.botao_2_2 = tk.Button(self.janela)
+        self.botao_2_2.grid(row=2,column=2,sticky="nsew")
         
         
         
