@@ -14,38 +14,22 @@ class Jogo:
             self.jogador = 1
                 
     def verifica_ganhador(self):
-        if self.matriz[0][0] == 1 and self.matriz[0][1] == 1 and self.matriz[0][2] == 1:
-            return 1            
-        elif self.matriz[0][0] == 1 and self.matriz[1][0] == 1 and self.matriz[2][0] == 1:
-            return 1
-        elif self.matriz[1][0] == 1 and self.matriz[1][1] == 1 and self.matriz[1][2] == 1:
-            return 1
-        elif self.matriz[2][0] == 1 and self.matriz[2][1] == 1 and self.matriz[2][2] == 1:
-            return 1
-        elif self.matriz[0][0] == 1 and self.matriz[1][1] == 1 and self.matriz[2][2] == 1:
-            return 1
-        elif self.matriz[0][1] == 1 and self.matriz[1][1] == 1 and self.matriz[2][1] == 1:
-            return 1
-        elif self.matriz[0][2] == 1 and self.matriz[1][2] == 1 and self.matriz[2][2] == 1:
-            return 1
-        elif self.matriz[2][0] == 1 and self.matriz[1][1] == 1 and self.matriz[0][2] == 1:
-            return 1
-        elif self.matriz[0][0] == 2 and self.matriz[0][1] == 2 and self.matriz[0][2] == 2:
-            return 2            
-        elif self.matriz[0][0] == 2 and self.matriz[1][0] == 2 and self.matriz[2][0] == 2:
-            return 2
-        elif self.matriz[1][0] == 2 and self.matriz[1][1] == 2 and self.matriz[1][2] == 2:
-            return 2
-        elif self.matriz[2][0] == 2 and self.matriz[2][1] == 2 and self.matriz[2][2] == 2:
-            return 2
-        elif self.matriz[0][0] == 2 and self.matriz[1][1] == 2 and self.matriz[2][2] == 2:
-            return 2
-        elif self.matriz[0][1] == 2 and self.matriz[1][1] == 2 and self.matriz[2][1] == 2:
-            return 2
-        elif self.matriz[0][2] == 2 and self.matriz[1][2] == 2 and self.matriz[2][2] == 2:
-            return 2
-        elif self.matriz[2][0] == 2 and self.matriz[1][1] == 2 and self.matriz[0][2] == 2:
-            return 2  
+        if self.matriz[0][0] == self.matriz[0][1] == self.matriz[0][2] == self.jogador:
+            return self.jogador           
+        elif self.matriz[0][0] == self.matriz[1][0] == self.matriz[2][0] == self.jogador:
+            return self.jogador
+        elif self.matriz[1][0] == self.matriz[1][1] == self.matriz[1][2] == self.jogador:
+            return self.jogador
+        elif self.matriz[2][0] == self.matriz[2][1] == self.matriz[2][2] == self.jogador:
+            return self.jogador
+        elif self.matriz[0][0] == self.matriz[1][1] == self.matriz[2][2] == self.jogador:
+            return self.jogador
+        elif self.matriz[0][1] == self.matriz[1][1] == self.matriz[2][1] == self.jogador:
+            return self.jogador
+        elif self.matriz[0][2] == self.matriz[1][2] == self.matriz[2][2] == self.jogador:
+            return self.jogador
+        elif self.matriz[2][0] == self.matriz[1][1] == self.matriz[0][2] == self.jogador:
+            return self.jogador
         elif self.matriz 
             return 0
             
