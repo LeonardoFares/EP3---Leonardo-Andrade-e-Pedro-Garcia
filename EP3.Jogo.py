@@ -13,32 +13,26 @@ class Jogo:
         else:
             self.jogador = 1
                 
-    def verifica_ganhador():
-        if matriz[0][0] and matriz[0][1] and matriz[0][2] == self.jogador:
-            print ("jogador {0} ganhou".format(self.jogador))
+    def verifica_ganhador(self):
+        if self.matriz[0][0] and self.matriz[0][1] and self.matriz[0][2] == self.jogador:
             return             
-        elif matriz[0][0] and matriz[1][0] and matriz[2][0] == 1:
-            print ("jogador 1 ganhou")
+        elif self.matriz[0][0] and self.matriz[1][0] and self.matriz[2][0] == 1:
             return
-        elif matriz[1][0] and matriz[1][1] and matriz[1][2] == 1:
-            print("jogador 1 ganhou")
+        elif self.matriz[1][0] and self.matriz[1][1] and self.matriz[1][2] == 1:
             return
-        elif matriz[2][0] and matriz[2][1] and matriz[2][2] == 1:
-            print("jogador 1 ganhou")
+        elif self.matriz[2][0] and self.matriz[2][1] and self.matriz[2][2] == 1:
             return
-        elif matriz[0][0] and matriz[1][1] and matriz[2][2] == 1:
-            print("jogador 1 ganhou")
+        elif self.matriz[0][0] and self.matriz[1][1] and self.matriz[2][2] == 1:
             return
-        elif matriz[0][1] and matriz[1][1] and matriz[2][1] == 1:
-            print("jogador 1 ganhou")
+        elif self.matriz[0][1] and self.matriz[1][1] and self.matriz[2][1] == 1:
             return
-        elif matriz[0][2] and matriz[1][2] and matriz[2][2] == 1:
-            print("jogador 1 ganhou")
+        elif self.matriz[0][2] and self.matriz[1][2] and self.matriz[2][2] == 1:
             return
-        elif matriz[2][0] and matriz[1][1] and matriz[0][2] == 1:
-            print("jogador 1 ganhou")
-            return    
-    def limpa_jogadas():
+        elif self.matriz[2][0] and self.matriz[1][1] and self.matriz[0][2] == 1:
+            return 1   
+    def limpa_jogadas(self):
+        self.matriz = np.zeros([3,3])
+
         
         
         
