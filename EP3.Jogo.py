@@ -30,8 +30,14 @@ class Jogo:
             return self.jogador
         elif self.matriz[2][0] == self.matriz[1][1] == self.matriz[0][2] == self.jogador:
             return self.jogador
-        elif self.matriz 
-            return 0
+        else:
+            for i in range(0, 3):
+                for j in range(0, 3):
+                    if self.matriz[i][j] != 0:            
+                        valor = 0
+                    else:
+                        valor = -1
+            return valor
             
     def limpa_jogadas(self):
         self.matriz = np.zeros([3,3])
