@@ -6,12 +6,13 @@ Created on Tue Apr 19 08:12:53 2016
 """
 
 import tkinter as tk
-import numpy as np
+import Jogadas
 
 class Tabuleiro:
     #Classe do tabuleiro do jogo da velha
     
     def __init__(self):
+        self.Comandos = Jogadas.Jogo()
         self.janela = tk.Tk()  
         self.janela.title("Jogo da Velha")
         self.janela.geometry("300x350+100+100")
@@ -57,8 +58,16 @@ class Tabuleiro:
         
     def iniciar(self):
         self.janela.mainloop()
+    
+    def Jogodas(self):
+        self.recebe_jogada
+        self.verifica_ganhador
+        self.limpa_jogadas
+    
         
 app = Tabuleiro()
 app.iniciar()
+
+
 
 
