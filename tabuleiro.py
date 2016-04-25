@@ -75,7 +75,15 @@ class Tabuleiro:
         self.label.grid(row=3,column=0,columnspan=3,sticky="nsew")
         
        
-        self.Comandos.verifica_ganhador()
+    def vitoria(self):
+        if self.Comandos.verifica_ganhador == 1:
+            print("jogador 1 ganhou")
+        elif self.Comandos.verifica_ganhador == 2:
+            print("jogador 2 ganhou")
+        elif self.Comandos.verifica_ganhador == 0:
+            print("empate")
+        else:
+            print("proxima jogada")
         
         
         
