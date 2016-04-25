@@ -13,6 +13,7 @@ class Tabuleiro:
     
     def __init__(self):
         self.Comandos = Jogadas.Jogo()
+        
         self.janela = tk.Tk()  
         self.janela.title("Jogo da Velha")
         self.janela.geometry("300x350+100+100")
@@ -25,44 +26,57 @@ class Tabuleiro:
         self.janela.columnconfigure(2, minsize = 100)
         self.janela.columnconfigure(3, minsize = 100)
         
-        self.botao_0_0 = tk.Button(self.janela)
-        self.botao_0_0.grid(row=0,column=0,sticky="nsew")
+        self.label = tk.Label(self.janela)
+        self.label.configure(text="Proximo jogador")
+        self.label.grid(row=3, column=0, columnspan=3, sticky="nsew")         
         
-        self.botao_0_1 = tk.Button(self.janela)
-        self.botao_0_1.grid(row=0,column=1,sticky="nsew")
+        self.botao = [[1,2,3],
+                       [4,5,6],
+                       [7,8,9]]
         
-        self.botao_0_2 = tk.Button(self.janela)
-        self.botao_0_2.grid(row=0,column=2,sticky="nsew")
         
-        self.botao_1_0 = tk.Button(self.janela)
-        self.botao_1_0.grid(row=1,column=0,sticky="nsew")
+        self.botao[0][0] = tk.Button(self.janela)
+        self.botao[0][0].grid(row=0,column=0,sticky="nsew",command=self.clicar_botao00)
         
-        self.botao_2_0 = tk.Button(self.janela)
-        self.botao_2_0.grid(row=2,column=0,sticky="nsew")
+        self.botao[0][1] = tk.Button(self.janela)
+        self.botao[0][1].grid(row=0,column=1,sticky="nsew")
         
-        self.botao_1_1 = tk.Button(self.janela)
-        self.botao_1_1.grid(row=1,column=1,sticky="nsew")
+        self.botao[0][2]= tk.Button(self.janela)
+        self.botao[0][2].grid(row=0,column=2,sticky="nsew")
         
-        self.botao_1_2 = tk.Button(self.janela)
-        self.botao_1_2.grid(row=1,column=2,sticky="nsew")
+        self.botao[1][0]= tk.Button(self.janela)
+        self.botao[1][0].grid(row=1,column=0,sticky="nsew")
         
-        self.botao_2_1 = tk.Button(self.janela)
-        self.botao_2_1.grid(row=2,column=1,sticky="nsew")
+        self.botao[2][0]= tk.Button(self.janela)
+        self.botao[2][0].grid(row=2,column=0,sticky="nsew")
         
-        self.botao_2_2 = tk.Button(self.janela)
-        self.botao_2_2.grid(row=2,column=2,sticky="nsew")
+        self.botao[1][1] = tk.Button(self.janela)
+        self.botao[1][1].grid(row=1,column=1,sticky="nsew")
+        
+        self.botao[1][2] = tk.Button(self.janela)
+        self.botao[1][2].grid(row=1,column=2,sticky="nsew")
+        
+        self.botao[2][1]= tk.Button(self.janela)
+        self.botao[2][1].grid(row=2,column=1,sticky="nsew")
+        
+        self.botao[2][2] = tk.Button(self.janela)
+        self.botao[2][2].grid(row=2,column=2,sticky="nsew")
         
         self.label = tk.Label(self.janela)
         self.label.grid(row=3,column=0,columnspan=3,sticky="nsew")
         
         
+    def clicar_botao00(self):
+        if self.Comandos.jogador == 1:
+            self.botao[0][0].config(text="x")
+        else:
+            self.botao[0][0].config(text="o")
+        
     def iniciar(self):
         self.janela.mainloop()
     
-    def Clicar(self):
-        receber_a_jogada = Comandos.recebe_jogadas(linha,coluna)
-        self.verifica_ganhador
-        self.limpa_jogadas
+    
+        
     
         
 app = Tabuleiro()
