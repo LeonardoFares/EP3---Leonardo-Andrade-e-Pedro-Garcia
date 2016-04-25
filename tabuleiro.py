@@ -59,8 +59,8 @@ class Tabuleiro:
     def iniciar(self):
         self.janela.mainloop()
     
-    def Jogodas(self):
-        self.recebe_jogada
+    def Clicar(self):
+        receber_a_jogada = Comandos.recebe_jogadas(linha,coluna)
         self.verifica_ganhador
         self.limpa_jogadas
     
