@@ -74,56 +74,69 @@ class Tabuleiro:
         self.label = tk.Label(self.janela)
         self.label.grid(row=3,column=0,columnspan=3,sticky="nsew")
         
+       
+        self.Comandos.verifica_ganhador()
+        
+        
         
     def clicar_botao00(self):
+        self.Comandos.recebe_jogada(0,0)
         if self.Comandos.jogador == 1:
             self.botao[0][0].config(text="x")
         else:
             self.botao[0][0].config(text="o")
         
     def clicar_botao01(self):
+        self.Comandos.recebe_jogada(0,1)
         if self.Comandos.jogador == 1:
             self.botao[0][1].config(text="x")
         else:
             self.botao[0][1].config(text="o")
         
     def clicar_botao02(self):
+        self.Comandos.recebe_jogada(0,2)
         if self.Comandos.jogador == 1:
             self.botao[0][2].config(text="x")
         else:
             self.botao[0][2].config(text="o")    
     
     def clicar_botao10(self):
+        self.Comandos.recebe_jogada(1,0)
         if self.Comandos.jogador == 1:
             self.botao[1][0].config(text="x")
         else:
             self.botao[1][0].config(text="o")    
         
     def clicar_botao20(self):
+        self.Comandos.recebe_jogada(2,0)
         if self.Comandos.jogador == 1:
             self.botao[2][0].config(text="x")
         else:
             self.botao[2][0].config(text="o")    
         
     def clicar_botao11(self):
+        self.Comandos.recebe_jogada(1,1)
         if self.Comandos.jogador == 1:
             self.botao[1][1].config(text="x")
         else:
             self.botao[1][1].config(text="o")    
          
     def clicar_botao12(self):
+        self.Comandos.recebe_jogada(1,2)
         if self.Comandos.jogador == 1:
             self.botao[1][2].config(text="x")
         else:
             self.botao[1][2].config(text="o")    
          
     def clicar_botao21(self):
+        self.Comandos.recebe_jogada(2,1)
         if self.Comandos.jogador == 1:
             self.botao[2][1].config(text="x")
         else:
             self.botao[2][1].config(text="o")    
          
     def clicar_botao22(self):
+        self.Comandos.recebe_jogada(2,2)
         if self.Comandos.jogador == 1:
             self.botao[2][2].config(text="x")
         else:
