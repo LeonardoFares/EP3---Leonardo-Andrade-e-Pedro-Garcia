@@ -71,11 +71,10 @@ class Tabuleiro:
         self.botao[2][2].grid(row=2,column=2,sticky="nsew")
         self.botao[2][2].configure(command=self.clicar_botao22)        
  
-    def botao_reinicio(self):
-         self.reinicio = tk.Button(self.janela)
-         self.reinicio.grid(row=3,column=2,sticky="nsew")
-         self.reinicio.configure(text="Reiniciar")
-         self.reinicio.configure(command=self.reiniciar())   
+        self.reinicio = tk.Button(self.janela)
+        self.reinicio.grid(row=3,column=2,sticky="nsew")
+        self.reinicio.configure(text="Reiniciar")
+        self.reinicio.configure(command=self.reiniciar)   
          
     def reiniciar(self):
         self.Comandos.limpa_jogadas()
@@ -91,13 +90,10 @@ class Tabuleiro:
         print (resultado)
         if resultado == 1:
             self.label.configure(text="Jogador 1 ganhou!")
-            self.botao_reinicio()
         elif resultado == 2:
             self.label.configure(text="Jogador 2 ganhou")
-            self.botao_reinicio()
         elif resultado == 0:
             self.label.configure(text="Empate!")
-            self.botao_reinicio()
         else:
             self.label.configure(text="Proximo jogador: {0}".format(self.Comandos.jogador))
         
