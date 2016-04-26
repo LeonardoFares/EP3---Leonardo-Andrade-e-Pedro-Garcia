@@ -41,6 +41,7 @@ class Jogo:
             
     def limpa_jogadas(self):
         self.matriz = matriz0()
+        
 
         
         
