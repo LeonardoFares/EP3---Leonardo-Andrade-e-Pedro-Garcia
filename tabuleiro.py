@@ -109,73 +109,73 @@ class Tabuleiro:
         
     def clicar_botao00(self):
         if self.Comandos.jogador == 1:
-            self.botao[0][0].config(text="x")
+            self.botao[0][0].config(text="x", font = 'Arial 30')
         else:
-            self.botao[0][0].config(text="o")
+            self.botao[0][0].config(text="o", font = 'Arial 30')
         self.Comandos.recebe_jogada(0,0)
         self.vitoria()
         self.botao[0][0].config(state="disable")
     def clicar_botao01(self):        
         if self.Comandos.jogador == 1:
-            self.botao[0][1].config(text="x")
+            self.botao[0][1].config(text="x", font = 'Arial 30')
         else:
-            self.botao[0][1].config(text="o")
+            self.botao[0][1].config(text="o", font = 'Arial 30')
         self.Comandos.recebe_jogada(0,1)    
         self.botao[0][1].config(state="disable")
         self.vitoria()
     def clicar_botao02(self):
         if self.Comandos.jogador == 1:
-            self.botao[0][2].config(text="x")
+            self.botao[0][2].config(text="x", font = 'Arial 30')
         else:
-            self.botao[0][2].config(text="o")    
+            self.botao[0][2].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(0,2)
         self.vitoria()
         self.botao[0][2].config(state="disable")
     def clicar_botao10(self):
         if self.Comandos.jogador == 1:
-            self.botao[1][0].config(text="x")
+            self.botao[1][0].config(text="x", font = 'Arial 30')
         else:
-            self.botao[1][0].config(text="o")    
+            self.botao[1][0].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(1,0)
         self.vitoria()
         self.botao[1][0].config(state="disable")
     def clicar_botao20(self):
         if self.Comandos.jogador == 1:
-            self.botao[2][0].config(text="x")
+            self.botao[2][0].config(text="x", font = 'Arial 30')
         else:
-            self.botao[2][0].config(text="o")    
+            self.botao[2][0].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(2,0)
         self.vitoria()
         self.botao[2][0].config(state="disable")
     def clicar_botao11(self):
         if self.Comandos.jogador == 1:
-            self.botao[1][1].config(text="x")
+            self.botao[1][1].config(text="x", font = 'Arial 30')
         else:
-            self.botao[1][1].config(text="o")    
+            self.botao[1][1].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(1,1)
         self.vitoria() 
         self.botao[1][1].config(state="disable")
     def clicar_botao12(self):
         if self.Comandos.jogador == 1:
-            self.botao[1][2].config(text="x")
+            self.botao[1][2].config(text="x", font = 'Arial 30')
         else:
-            self.botao[1][2].config(text="o")    
+            self.botao[1][2].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(1,2)
         self.vitoria() 
         self.botao[1][2].config(state="disable")
     def clicar_botao21(self):
         if self.Comandos.jogador == 1:
-            self.botao[2][1].config(text="x")
+            self.botao[2][1].config(text="x", font = 'Arial 30')
         else:
-            self.botao[2][1].config(text="o")    
+            self.botao[2][1].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(2,1)
         self.vitoria() 
         self.botao[2][1].config(state="disable")
     def clicar_botao22(self):
         if self.Comandos.jogador == 1:
-            self.botao[2][2].config(text="x")
+            self.botao[2][2].config(text="x", font = 'Arial 30')
         else:
-            self.botao[2][2].config(text="o")    
+            self.botao[2][2].config(text="o", font = 'Arial 30')    
         self.Comandos.recebe_jogada(2,2)
         self.vitoria()             
         self.botao[2][2].config(state="disable")
