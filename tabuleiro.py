@@ -20,7 +20,7 @@ class Tabuleiro:
         self.janela.rowconfigure(0, minsize = 100)
         self.janela.rowconfigure(1, minsize = 100)
         self.janela.rowconfigure(2, minsize = 100)
-        self.janela.rowconfigure(3, minsize = 100)
+        self.janela.rowconfigure(3, minsize = 50)
         self.janela.columnconfigure(0, minsize = 100)
         self.janela.columnconfigure(1, minsize = 100)
         self.janela.columnconfigure(2, minsize = 100)
@@ -77,13 +77,13 @@ class Tabuleiro:
        
     def vitoria(self):
         if self.Comandos.verifica_ganhador == 1:
-            print("jogador 1 ganhou")
+            self.label.configure(text="Jogador 1 ganhou!")
         elif self.Comandos.verifica_ganhador == 2:
-            print("jogador 2 ganhou")
+            self.label.configure(text="Jogador 2 ganhou")
         elif self.Comandos.verifica_ganhador == 0:
-            print("empate")
+            self.label.configure(text="Empate!")
         else:
-            print("proxima jogada")
+            self.label.configure(text="Proxima jogada")
         
         
         
@@ -93,63 +93,63 @@ class Tabuleiro:
             self.botao[0][0].config(text="x")
         else:
             self.botao[0][0].config(text="o")
-        
+        self.vitoria()
     def clicar_botao01(self):
         self.Comandos.recebe_jogada(0,1)
         if self.Comandos.jogador == 1:
             self.botao[0][1].config(text="x")
         else:
             self.botao[0][1].config(text="o")
-        
+        self.vitoria()
     def clicar_botao02(self):
         self.Comandos.recebe_jogada(0,2)
         if self.Comandos.jogador == 1:
             self.botao[0][2].config(text="x")
         else:
             self.botao[0][2].config(text="o")    
-    
+        self.vitoria()
     def clicar_botao10(self):
         self.Comandos.recebe_jogada(1,0)
         if self.Comandos.jogador == 1:
             self.botao[1][0].config(text="x")
         else:
             self.botao[1][0].config(text="o")    
-        
+        self.vitoria()
     def clicar_botao20(self):
         self.Comandos.recebe_jogada(2,0)
         if self.Comandos.jogador == 1:
             self.botao[2][0].config(text="x")
         else:
             self.botao[2][0].config(text="o")    
-        
+        self.vitoria()
     def clicar_botao11(self):
         self.Comandos.recebe_jogada(1,1)
         if self.Comandos.jogador == 1:
             self.botao[1][1].config(text="x")
         else:
             self.botao[1][1].config(text="o")    
-         
+        self.vitoria() 
     def clicar_botao12(self):
         self.Comandos.recebe_jogada(1,2)
         if self.Comandos.jogador == 1:
             self.botao[1][2].config(text="x")
         else:
             self.botao[1][2].config(text="o")    
-         
+        self.vitoria() 
     def clicar_botao21(self):
         self.Comandos.recebe_jogada(2,1)
         if self.Comandos.jogador == 1:
             self.botao[2][1].config(text="x")
         else:
             self.botao[2][1].config(text="o")    
-         
+        self.vitoria() 
     def clicar_botao22(self):
         self.Comandos.recebe_jogada(2,2)
         if self.Comandos.jogador == 1:
             self.botao[2][2].config(text="x")
         else:
             self.botao[2][2].config(text="o")    
-             
+        self.vitoria()             
      
      
      
