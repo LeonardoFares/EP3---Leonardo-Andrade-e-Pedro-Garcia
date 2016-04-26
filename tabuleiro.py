@@ -90,10 +90,19 @@ class Tabuleiro:
         print (resultado)
         if resultado == 1:
             self.label.configure(text="Jogador 1 ganhou!")
+            for i in range(3):
+                for j in range(3):
+                    self.botao[i][j].config(state="disable")
         elif resultado == 2:
             self.label.configure(text="Jogador 2 ganhou")
+            for i in range(3):
+                for j in range(3):
+                    self.botao[i][j].config(state="disable")
         elif resultado == 0:
             self.label.configure(text="Empate!")
+            for i in range(3):
+                for j in range(3):
+                    self.botao[i][j].config(state="disable")
         else:
             self.label.configure(text="Proximo jogador: {0}".format(self.Comandos.jogador))
         
